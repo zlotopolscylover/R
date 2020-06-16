@@ -1,0 +1,49 @@
+---
+title: "RaportPD4"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+###W raporcie ujê³am tylko wyniki przedstawiaj¹ce dzia³anie mojego algorytmu dla M=5
+
+
+##Tabela przedstawiaj¹ca wartoœci indeksów FM i AR dla algorytmu spectral_clustering na pierwszym zbiorze benchmarkowym
+```{r cars1}
+wyniki <- read.csv('wyniki.csv')
+wyniki
+
+```
+
+```{r cars2}
+wyniki <- readRDS('wyniki_spectral.rds')
+```
+
+```{r cars3}
+dane <- readRDS('data.rds')
+```
+
+## Wykres dla danych "atom" 
+```{r cars4}
+plot(dane[[1]], col=wyniki[[1]])
+```
+
+## Wykres dla danych "engytime"
+```{r cars5}
+plot(dane[[2]], col=wyniki[[2]])
+```
+
+## Wykres dla danych "wingnut"
+```{r cars 6}
+plot(dane[[9]], col=wyniki[[9]])
+```
+
+## Wykres dla danych "twodiamonds"
+```{r cars7}
+plot(dane[[8]], col=wyniki[[8]])
+```
+
